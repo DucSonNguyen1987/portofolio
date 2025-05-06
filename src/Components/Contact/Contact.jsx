@@ -6,8 +6,35 @@ import location_icon from '../../assets/location_icon.svg';
 import call_icon from '../../assets/call_icon.svg';
 
 const Contact = () => {
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "77cc4e13-5cb8-4cd6-b8bb-f2b44d8762db");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert (data.message)
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+    
+
+  
   return (
-    <div className='contact'>
+    <div id='contact'>
     <div className='contact-title'>
         <h1>Get in touch</h1>
         <img src={theme_pattern} alt='' />
@@ -27,7 +54,7 @@ const Contact = () => {
             </div>
         </div>
 
-        <form className="contact-right">
+        <form  onSubmit= {onSubmit} className="contact-right">
         <label htmlFor=''> Votre Nom </label>
         <input type='text' placeholder='Entrez votre nom' />
         <label htmlFor=''> Votre Email </label>
