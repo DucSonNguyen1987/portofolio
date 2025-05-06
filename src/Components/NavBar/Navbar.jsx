@@ -4,13 +4,18 @@ import logo from '../../assets/logo.svg';
 import underline from '../../assets/nav_underline.svg';  
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
+import menu_open from '../../assets/menu_open.svg';
+import menu_close from '../../assets/menu_close.svg';
+
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
   
   return ( 
     <div className='navbar'>
-      <img src={logo} alt='' />
+      <img src={logo} alt=''  />
+     { <img src={menu_open} alt='' className='nav-mob-open' />}
       <ul className='nav-menu'>
+      <img src={menu_close} alt='' className= 'nav-mob-close'/>
         <li>
           <AnchorLink className='anchor-link' href='#home'>
             <p onClick={() => setMenu("home")}>Home</p>
@@ -43,7 +48,9 @@ const Navbar = () => {
         </li>
       </ul>
       <div className='nav-connect'>
-      <AnchorLink className='anchor-link' offset={50} href='#contact'>Connectons nous !</AnchorLink>
+      <AnchorLink className='anchor-link' offset={50} href='#contact'>
+      Connectons nous !
+      </AnchorLink>
       </div>
     </div>
   )
