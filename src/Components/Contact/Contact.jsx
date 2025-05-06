@@ -13,7 +13,7 @@ const Contact = () => {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "77cc4e13-5cb8-4cd6-b8bb-f2b44d8762db");
+    formData.append("access_key", "77cc4e13-5cb8-4cd6-b6bb-f2b44d8762db");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -41,7 +41,7 @@ const Contact = () => {
       <div className='contact-section'>
         <div className='contact-left'>
           <h1>Et si on échangeait ?</h1>
-          <p>Message de contact</p>
+          <p>En quête d'un poste d'alternant DevOps (3 semaines entreprise/1 semaine formation), je souhaite mettre mes compétences multiples au service de projets innovants. Contactez-moi pour discuter de la façon dont ma vision à 360° pourrait booster vos projets numériques.</p>
           <div className='contact-detail'>
             <img src={mail_icon} alt='' /> <p>duc.son.nguyen48@gmail.com</p>
           </div>
@@ -49,7 +49,7 @@ const Contact = () => {
             <img src={call_icon} alt='' /> <p>0642321318</p>
           </div>
           <div className='contact-detail'>
-            <img src={location_icon} alt='' />  <p>Paris</p>
+            <img src={location_icon} alt='' />  <p>Boulogne Billancourt</p>
           </div>
         </div>
 

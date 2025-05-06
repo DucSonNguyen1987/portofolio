@@ -1,108 +1,203 @@
-.about{
+/* Reset pour s'assurer qu'il n'y a pas de conflit avec d'autres styles */
+.about {
+    box-sizing: border-box;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
+    gap: var(--space-xl);
+    width: 100%;
+    max-width: 100%;
+    margin: var(--space-xl) 0; /* Marges verticales uniquement */
+    padding: 0 5%; /* Padding horizontal en pourcentage */
+}
+
+/* Container interne pour limiter la largeur et centrer le contenu */
+.about-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Espace après la section About */
+.about::after {
+    content: "";
+    display: block;
+    height: var(--space-xl);
+    width: 100%;
+    clear: both;
 }
 
 .about-title {
     position: relative;
+    text-align: center;
+    width: 100%;
+    margin-bottom: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.about-title h1{
-padding: 0px 30px;
-font-size: 4vh;
-font-weight: 800;
+.about-title h1 {
+    padding: 0 1.5rem;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    position: relative;
+    z-index: 1; /* Assure que le texte est au-dessus de l'image */
 }
 
-.about-title img{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
+/* Conteneur pour l'image de motif du titre */
+.title-pattern-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -20px; /* Ajustez cette valeur selon vos besoins */
 }
 
-.about-sections{
+.title-pattern {
+    position: relative;
+    z-index: 0;
+    max-width: 150px; /* Ajustez selon la taille de votre image */
+    margin-left: 150px; /* Décalage vers la droite */
+}
+
+.about-sections {
     display: flex;
     gap: 5%;
     width: 100%;
+    justify-content: center;
 }
 
 .about-right {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: var(--space-xl);
     width: 100%;
+    max-width: 800px;
+    align-items: center;
 }
 
 .about-para {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    font-size: 1em;
-    font-weight: 500;
+    gap: var(--space-sm);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    text-align: center;
+    width: 100%;
 }
 
-.about-skills{
+.about-skills {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--space-md);
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
 }
-.about-skill{
+
+.about-skill {
     display: flex;
-    gap: 50px;
+    gap: 3rem;
     align-items: center;
     transition: 0.3s;
+    width: 100%;
 }
 
-.about-skill p{
+.about-skill p {
     min-width: 150px;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    margin: 0; /* Supprime les marges par défaut */
 }
 
-.about-skill hr{
+/* Style de base pour les barres de compétence */
+.about-skill hr {
     outline: none;
     border: none;
-    width: 50%;
     height: 10px;
     border-radius: 50px;
-    background: linear-gradient(260deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);;
+    background: var(--color-primary-gradient);
+    margin: 0; /* Supprime les marges par défaut */
+    width: 0; /* La largeur sera définie par les classes spécifiques */
 }
 
-.about-achievements{
+/* Classes pour définir les différents niveaux de compétence */
+.skill-level-80 {
+    width: 80% !important;
+}
+
+.skill-level-75 {
+    width: 75% !important;
+}
+
+.skill-level-70 {
+    width: 70% !important;
+}
+
+.skill-level-65 {
+    width: 65% !important;
+}
+
+.skill-level-60 {
+    width: 60% !important;
+}
+
+.skill-level-50 {
+    width: 50% !important;
+}
+
+.skill-level-40 {
+    width: 40% !important;
+}
+
+.skill-level-30 {
+    width: 30% !important;
+}
+
+.about-achievements {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    margin-bottom: 80px;
+    margin-bottom: var(--space-xl);
+    text-align: center;
+    padding-bottom: var(--space-xl);
 }
 
-.about-achievement{
+.about-achievement {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: var(--space-xs);
     transition: 0.5s;
 }
 
 .about-achievement h1 {
-    font-size: 60px;
-    font-weight: 700;
-    background: linear-gradient(260deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    background: var(--color-primary-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin: 0; /* Supprime les marges par défaut */
 }
 
-.about-achievement p{
-   font-size: 22px;
-   font-weight: 500;
-
+.about-achievement p {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+    color: var(--color-text-primary);
+    margin: 0; /* Supprime les marges par défaut */
 }
 
-.about-skill:hover{
+.about-skill:hover {
     transform: scale(1.05);
     transition: 0.3s;
 }
@@ -112,69 +207,65 @@ font-weight: 800;
     transition: 0.5s;
 }
 
-@media(max-width: 768px){
-    .about{
-        gap: 80px;
-        margin: 50px 70px;
-        align-items: start;
+/* Zone tampon entre les sections */
+.section-spacer {
+    height: 80px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .about {
+        gap: var(--space-lg);
+        padding: 0 var(--space-md);
     }
-    .about-title h1{
-        font-size: 50px;
+    
+    .about-title h1 {
+        font-size: var(--font-size-lg);
         padding: 0;
     }
 
-    .about-title img{
-        width: 130px;
-        right: -20px;
+    /* Ajustements pour l'image du titre sur mobile */
+    .title-pattern-container {
+        margin-top: -15px;
+    }
+    
+    .title-pattern {
+        max-width: 120px;
+        margin-left: 100px;
     }
 
-    .about-sections{
+    .about-sections {
         flex-direction: column;
-    }
-    .about-left{
-         display: none;
-    }
-
-    .about-para{
-        font-size: 18px;
-        line-height: 30px;
-    }
-
-    .about-skill{
-        gap:20px;
         align-items: center;
     }
-
-    .about-skill p{
-        font-size: 20px;
+    
+    .about-left {
+        display: none;
     }
 
-    .about-skill hr{
+    .about-para {
+        line-height: var(--line-height-normal);
+    }
+
+    .about-skill {
+        gap: var(--space-md);
+    }
+
+    .about-skill hr {
         height: 6px;
     }
 
-    .about-achievements{
-        justify-content: space-between;
+    .about-achievements {
+        flex-wrap: wrap;
+        gap: var(--space-md);
+        padding-bottom: var(--space-lg);
     }
 
-    .about-achievement{
-        gap: 10px;
+    .about-achievement h1 {
+        font-size: var(--font-size-lg);
     }
 
-    .about-achievement h1{
-       font-size: 34px; 
-       font-weight: 700;
+    .about-achievement p {
+        font-size: var(--font-size-sm);
     }
-
-    .about-achievement p{
-        text-align: center;
-        font-size: 16px;
-    }
-
-
 }
-
-
-
-
-

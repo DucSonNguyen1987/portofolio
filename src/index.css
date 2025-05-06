@@ -1,25 +1,108 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Add this to improve layout consistency */
+    box-sizing: border-box;
 }
+
+:root {
+    /* Palette de tailles de police */
+    --font-size-xxl: 3.5rem;   /* Grands titres (Hero, sections) */
+    --font-size-xl: 2.5rem;    /* Titres secondaires */
+    --font-size-lg: 1.75rem;   /* Sous-titres, chiffres importants */
+    --font-size-md: 1.25rem;   /* Texte de paragraphe principal */
+    --font-size-sm: 1rem;      /* Texte secondaire */
+    --font-size-xs: 0.875rem;  /* Notes, légendes */
+    
+    /* Poids des polices */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+    
+    /* Hauteurs de ligne */
+    --line-height-tight: 1.2;    /* Pour les titres */
+    --line-height-normal: 1.5;   /* Pour le texte courant */
+    --line-height-loose: 1.8;    /* Pour le texte plus aéré */
+
+    /* Couleurs primaires */
+  --color-primary-gradient: linear-gradient(260deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  --color-primary-purple: #833AB4;  /* Premier point du dégradé */
+  --color-primary-red: #FD1D1D;     /* Point médian du dégradé */
+  --color-primary-orange: #FCB045;  /* Dernier point du dégradé */
+  
+  /* Couleurs de fond */
+  --color-bg-main: #404040;        /* Fond principal */
+  --color-bg-card: #32323c;        /* Fond des éléments (formulaires, cartes) */
+  --color-bg-hover: linear-gradient(45deg, #3f0028, #582300); /* Fond au survol */
+  
+  /* Couleurs de texte */
+  --color-text-primary: #F2F2F2;   /* Texte principal */
+  --color-text-secondary: #d4d4d4;  /* Texte secondaire */
+  
+  /* Couleurs d'accentuation */
+  --color-border-light: #F2F2F2;    /* Bordures claires */
+  --color-border-accent: #FD1D1D;   /* Bordures accentuées */
+  
+  /* Couleurs d'état */
+  --color-success: #4CAF50;
+  --color-error: #F44336;
+  --color-warning: #FF9800;
+  
+  /* Ombres */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Classes utilitaires pour utiliser le dégradé comme texte */
+.gradient-text {
+    background: var(--color-primary-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
 
 body {
     height: 100vh;
     background-color: #404040;
     color: #F2F2F2;
-    font-family: 'Outfit', sans-serif; /* Add fallback font */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px; /* Taille de base pour les calculs rem */
+    line-height: var(--line-height-normal);
+    overflow-x: hidden;
 }
 
-/* Add styling for anchor links */
+h1, h2, h3, h4, h5, h6 {
+    line-height: var(--line-height-tight);
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Lien d'ancrage */
 .anchor-link {
     text-decoration: none;
     color: inherit;
 }
 
-/* Ensure images don't overflow their containers */
+/* Assurer que les images sont responsives */
 img {
     max-width: 100%;
     height: auto;
+}
+
+/* Media query pour les appareils mobiles */
+@media (max-width: 768px) {
+    :root {
+        --font-size-xxl: 2.5rem;
+        --font-size-xl: 2rem;
+        --font-size-lg: 1.5rem;
+        --font-size-md: 1.125rem;
+        --font-size-sm: 1rem;
+        --font-size-xs: 0.875rem;
+    }
 }
