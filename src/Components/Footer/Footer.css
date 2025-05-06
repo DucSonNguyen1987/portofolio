@@ -30,7 +30,7 @@
     padding-right: 80px;
 }
 
-.footer-email-input imput{
+.footer-email-input input{
     outline: none;
     border: none;
     background: transparent;
@@ -61,11 +61,11 @@
     margin-bottom: 50px;
 }
 
-.footer-email-input:hoover{
+.footer-email-input:hover{
     border: 2px solid #f2f2f2 ;
 }   
 
-.footer-subscribe:hoover{
+.footer-subscribe:hover{
     transform: scale(1.1);
     transition: 0.3s;
 }
@@ -84,4 +84,3 @@
         margin-bottom: 50px;
     }
 }
-

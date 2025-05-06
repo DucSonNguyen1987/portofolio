@@ -1,14 +1,25 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Add this to improve layout consistency */
 }
-
-
-
 
 body {
     height: 100vh;
     background-color: #404040;
-    color:#F2F2F2;
-    font-family: 'outfit';
+    color: #F2F2F2;
+    font-family: 'Outfit', sans-serif; /* Add fallback font */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Add styling for anchor links */
+.anchor-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Ensure images don't overflow their containers */
+img {
+    max-width: 100%;
+    height: auto;
 }
