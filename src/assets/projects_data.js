@@ -1,28 +1,12 @@
 // Structure des données pour les projets
 
 const projects_data = [
-    {
-        title: "Portfolio Personnel",
-        shortDescription: "Site vitrine présentant mes compétences et projets",
-        fullDescription: "Portfolio réactif développé avec React et Vite, mettant en valeur mon parcours professionnel et mes projets. Le site présente une interface utilisateur intuitive avec des animations fluides et un système de design cohérent.",
-        image: "/images/projects/portfolio.jpg", // Remplacer par le chemin de votre image
-        technologies: ["React", "Vite", "CSS", "JavaScript"],
-        categories: ["development", "design"], // Catégories pour le filtrage
-        features: [
-            "Design responsive optimisé pour tous les appareils",
-            "Animations et transitions fluides",
-            "Système de téléchargement de CV",
-            "Formulaire de contact fonctionnel",
-            "Galerie de projets interactive"
-        ],
-        githubLink: "https://github.com/votre-username/portfolio",
-        liveLink: "https://votre-portfolio.com"
-    },
+   
     {
         title: "YAYA - Spicy Juices",
         shortDescription: "Application e-commerce pour une marque de jus épicés",
         fullDescription: "YAYA est mon projet de fin d'études, une plateforme e-commerce complète pour une marque de jus de fruits épicés. Cette application fullstack développée avec la stack MERN offre une expérience utilisateur fluide, de la découverte des produits jusqu'au paiement sécurisé.",
-        image: ["./images/projects/YAYA/YAYA_Home_Page.png","./images/projects/YAYA/YAYA_My_Juice.png", "./images/projects/YAYA/YAYA_My_Juice.png","./images/projects/YAYA/YAYA_Nos_jus.png"],
+        image: "/images/projects/YAYA/YAYA_Home_Page.png",
         technologies: ["React", "Node.js", "Express", "MongoDB", "Vercel", "JWT", "Stripe"],
         categories: ["development", "design", "management"],
         features: [

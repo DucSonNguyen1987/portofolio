@@ -102,65 +102,6 @@
     margin: 0 auto;
 }
 
-.about-skill {
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-    transition: 0.3s;
-    width: 100%;
-}
-
-.about-skill p {
-    min-width: 150px;
-    font-size: var(--font-size-md);
-    font-weight: var(--font-weight-medium);
-    color: var(--color-text-primary);
-    margin: 0; /* Supprime les marges par défaut */
-}
-
-/* Style de base pour les barres de compétence */
-.about-skill hr {
-    outline: none;
-    border: none;
-    height: 10px;
-    border-radius: 50px;
-    background: var(--color-primary-gradient);
-    margin: 0; /* Supprime les marges par défaut */
-    width: 0; /* La largeur sera définie par les classes spécifiques */
-}
-
-/* Classes pour définir les différents niveaux de compétence */
-.skill-level-80 {
-    width: 80% !important;
-}
-
-.skill-level-75 {
-    width: 75% !important;
-}
-
-.skill-level-70 {
-    width: 70% !important;
-}
-
-.skill-level-65 {
-    width: 65% !important;
-}
-
-.skill-level-60 {
-    width: 60% !important;
-}
-
-.skill-level-50 {
-    width: 50% !important;
-}
-
-.skill-level-40 {
-    width: 40% !important;
-}
-
-.skill-level-30 {
-    width: 30% !important;
-}
 
 .about-achievements {
     display: flex;

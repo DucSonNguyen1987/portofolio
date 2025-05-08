@@ -46,7 +46,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: var(--space-sm);
+    gap: 2vw;
     margin-bottom: var(--space-lg);
     width: 100%;
 }
@@ -87,8 +87,9 @@
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: var(--space-lg);
+    gap: 2vh;
     width: 100%;
+    margin-top: 2vh;
 }
 
 /* Project card styling */
@@ -102,6 +103,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    margin-right: 2vw;
+    margin-bottom: 2vh;
 }
 
 .project-card:hover {
@@ -214,6 +217,9 @@
     overflow-y: auto;
     position: relative;
     animation: modalFadeIn 0.3s ease;
+    padding: 2%;
+    gap: 2vw;
+    margin-bottom: 2vh;
 }
 
 @keyframes modalFadeIn {
@@ -238,12 +244,14 @@
 .modal-header {
     padding: var(--space-lg) var(--space-lg) var(--space-md);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2vh;
 }
 
 .modal-header h2 {
     margin: 0 0 var(--space-sm);
     font-size: var(--font-size-xl);
     color: var(--color-text-primary);
+    margin-bottom: 1vh;
 }
 
 /* Modal body */
@@ -264,12 +272,19 @@
     width: 100%;
     height: auto;
     display: block;
+    margin-right: 2vw;
+}
+
+.modal-description{
+    margin-left: 2vw;
+    margin-bottom: 2vh;
 }
 
 .modal-description h3 {
     font-size: var(--font-size-lg);
     margin: var(--space-md) 0 var(--space-sm);
     color: var(--color-text-primary);
+    margin-bottom: 2vh;
 }
 
 .modal-description p {
@@ -277,28 +292,31 @@
     line-height: var(--line-height-normal);
     color: var(--color-text-secondary);
     font-size: var(--font-size-md);
+    margin-bottom: 2vh;
 }
 
 .modal-description ul {
     padding-left: var(--space-lg);
     margin: 0 0 var(--space-lg);
+    margin-bottom: 2vh;
 }
 
 .modal-description li {
     margin-bottom: var(--space-xs);
     color: var(--color-text-secondary);
     font-size: var(--font-size-md);
+    
 }
 
 /* Modal links */
 .modal-links {
     display: flex;
-    gap: var(--space-md);
+    gap: 2vw;
     margin-top: var(--space-lg);
 }
 
 .project-button {
-    padding: var(--space-sm) var(--space-lg);
+    padding: 10px;
     border-radius: 50px;
     font-weight: var(--font-weight-medium);
     text-decoration: none;
@@ -364,7 +382,7 @@
     
     .projects-grid {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: var(--space-md);
+        gap: 40px;
     }
     
     .project-modal-content {

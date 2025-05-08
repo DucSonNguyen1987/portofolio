@@ -9,7 +9,7 @@ const Hero = () => {
     <div id='home' className='hero'>
       <img src={profile_img} alt='' />
       <h1> <span>Duc-Son Nguyen, <br /> </span> Développeur fullstack Javascript  <br /> Graphic Designer</h1>
-      <p>Développeur avec un parcours atypique combinant expertise en design, management et code. Je crée des applications web complètes avec une approche à 360° qui allie technique, esthétique et vision business.</p>
+      <p>Développeur avec un parcours atypique combinant expertise en design, management et code.<br />Je crée des applications web complètes avec une approche à 360° qui allie technique, esthétique et vision business.</p>
       <div className="hero-action">
         <div className='hero-connect'>
           <AnchorLink className="anchor-link" offset={50} href="#contact">Connectons nous</AnchorLink> 

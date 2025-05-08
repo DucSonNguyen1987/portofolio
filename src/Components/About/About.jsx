@@ -1,10 +1,24 @@
 import React from 'react';
 import './About.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
-import profile_img from '../../assets/about_profile.svg';
+import profile_img from '../../assets/profile_img.png';
+import SkillBar from './SkillBar';
+
+
 
 
 const About = () => {
+
+    const skills = [
+        {name : "HTML & CSS", percentage : 70},
+        {name : "React JS", percentage : 60},
+        {name : "Javascript", percentage : 55},
+        {name: "Node.JS" , percentage : 50},
+        {name : "Photoshop", percentage : 75},
+        {name : "Illustrato", percentage : 80},
+        {name : "Indesign", percentage : 80},
+    ]
+
     return (
         <>
             {/* Ajout d'un élément div pour l'espacement avant */}
@@ -29,23 +43,13 @@ const About = () => {
                                 <p>Cette triple expertise me permet d'avoir une vision globale des projets, comprenant à la fois les enjeux techniques, esthétiques et business. Je conçois des applications web complètes avec une attention particulière à l'expérience utilisateur et à l'efficacité des processus.</p>
                             </div>
                             <div className='about-skills'>
-                                {/* Enlever le style inline et utiliser des classes CSS spécifiques */}
-                                <div className="about-skill">
-                                    <p>HTML & CSS</p>
-                                    <hr className="skill-level skill-level-80" />
-                                </div>
-                                <div className="about-skill">
-                                    <p>React JS</p>
-                                    <hr className="skill-level skill-level-70" />
-                                </div>
-                                <div className="about-skill">
-                                    <p>Javascript</p>
-                                    <hr className="skill-level skill-level-75" />
-                                </div>
-                                <div className="about-skill">
-                                    <p>Node.JS</p>
-                                    <hr className="skill-level skill-level-65" />
-                                </div>
+                                {skills.map((skill, index) => {
+                                    <SkillBar
+                                        key= {index}
+                                        skill = {skill.name}
+                                        percentage={skill.percentage}
+                                        />
+                                })}
                             </div>
                         </div>  
                     </div>

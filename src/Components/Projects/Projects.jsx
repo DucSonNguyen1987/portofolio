@@ -11,7 +11,7 @@ const Projects = ({ activeCategory }) => {
     // État pour la catégorie active
     const [category, setCategory] = useState(activeCategory || 'all');
 
-    // Effet pour filtrer les projets quand la catégorie change
+    // Effet pour mettre à jour la catégorie quand activeCategory change
     useEffect(() => {
         if (activeCategory) {
             setCategory(activeCategory);
@@ -43,6 +43,12 @@ const Projects = ({ activeCategory }) => {
     // Fonction pour changer la catégorie
     const changeCategory = (newCategory) => {
         setCategory(newCategory);
+    };
+
+    // AJOUT: Fonction de gestion d'erreur d'image
+    const handleImageError = (e) => {
+        console.error(`Erreur de chargement de l'image: ${e.target.src}`);
+        e.target.src = "/images/default-project.png"; // Image par défaut en cas d'erreur
     };
 
     return (
@@ -102,7 +108,12 @@ const Projects = ({ activeCategory }) => {
                                 onClick={() => openProjectDetails(project)}
                             >
                                 <div className="project-image">
-                                    <img src={project.image} alt={project.title} />
+                                    {/* MODIFIÉ: Ajout du gestionnaire d'erreur */}
+                                    <img 
+                                        src={project.image} 
+                                        alt={project.title} 
+                                        onError={handleImageError}
+                                    />
                                     <div className="project-overlay">
                                         <h3>{project.title}</h3>
                                         <p>{project.shortDescription}</p>
@@ -137,7 +148,12 @@ const Projects = ({ activeCategory }) => {
                                 
                                 <div className="modal-body">
                                     <div className="modal-image">
-                                        <img src={selectedProject.image} alt={selectedProject.title} />
+                                        {/* MODIFIÉ: Ajout du gestionnaire d'erreur */}
+                                        <img 
+                                            src={selectedProject.image} 
+                                            alt={selectedProject.title} 
+                                            onError={handleImageError}
+                                        />
                                     </div>
                                     <div className="modal-description">
                                         <h3>Description</h3>
