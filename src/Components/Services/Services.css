@@ -40,7 +40,7 @@
 .services-data {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--space-lg);
+    gap: 2vw;
     margin-bottom: var(--space-xl);
 }
 
@@ -66,12 +66,19 @@
     max-width: 300px;
 }
 
+
+
 .services-readmore {
     display: flex;
     gap: var(--space-md);
     align-items: center;
     margin-top: var(--space-md);
     color: var(--color-text-primary);
+}
+
+.services-readmore img{
+    margin-left: 1vw;
+    margin-bottom: 1vh;
 }
 
 .services-format:hover {

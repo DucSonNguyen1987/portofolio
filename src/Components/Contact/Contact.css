@@ -9,6 +9,7 @@
 
 .contact-title {
     position: relative;
+    margin-bottom: 3vh;
 }
 
 .contact-title h1 {
@@ -27,6 +28,7 @@
 .contact-section {
     display: flex;
     gap: 9rem;
+    margin-top: 5vh;
 }
 
 .contact-left {
@@ -62,20 +64,26 @@
 .contact-detail {
     display: flex;
     align-items: center;
-    gap: var(--space-md);
+    gap: 2vh;
 }
+
+.contact-detail p{
+margin-top: 1vh;}
 
 .contact-right {
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: var(--space-md);
+    width: 50vw;
 }
 
 .contact-right label {
     color: var(--color-text-primary);
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-medium);
+    margin-bottom: 1vh;
+    margin-top: 1vh;
 }
 
 .contact-right input {
@@ -123,6 +131,7 @@
     margin-bottom: 3rem;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: 2vh;
 }
 
 .contact-submit:hover {

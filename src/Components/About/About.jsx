@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
-import profile_img from '../../assets/profile_img.png';
+import profile_img from '../../assets/about_photo.svg';
 import SkillBar from './SkillBar';
 
 
@@ -15,7 +15,7 @@ const About = () => {
         {name : "Javascript", percentage : 55},
         {name: "Node.JS" , percentage : 50},
         {name : "Photoshop", percentage : 75},
-        {name : "Illustrato", percentage : 80},
+        {name : "Illustrator", percentage : 80},
         {name : "Indesign", percentage : 80},
     ]
 
@@ -43,13 +43,13 @@ const About = () => {
                                 <p>Cette triple expertise me permet d'avoir une vision globale des projets, comprenant à la fois les enjeux techniques, esthétiques et business. Je conçois des applications web complètes avec une attention particulière à l'expérience utilisateur et à l'efficacité des processus.</p>
                             </div>
                             <div className='about-skills'>
-                                {skills.map((skill, index) => {
+                                {skills.map((skill, index) => (
                                     <SkillBar
                                         key= {index}
                                         skill = {skill.name}
                                         percentage={skill.percentage}
                                         />
-                                })}
+                                ))}
                             </div>
                         </div>  
                     </div>

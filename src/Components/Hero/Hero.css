@@ -9,6 +9,7 @@
 
 .hero img {
     margin-top: 3rem;
+    margin-bottom: 2rem;
 }
 
 .hero h1 {
@@ -41,6 +42,7 @@
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
     margin-bottom: 3rem;
+    margin-top: 3rem;
 }
 
 .hero-connect {

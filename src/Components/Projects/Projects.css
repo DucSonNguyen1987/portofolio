@@ -8,7 +8,7 @@
     justify-content: center;
     width: 100%;
     max-width: 100%;
-    margin: var(--space-xl) 0;
+    margin-bottom: 5vh;
     padding: 0 5%;
 }
 
@@ -27,7 +27,7 @@
     position: relative;
     text-align: center;
     width: 100%;
-    margin-bottom: var(--space-md);
+    margin-bottom: 5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,22 +152,26 @@
 
 .project-overlay h3 {
     color: var(--color-text-primary);
-    margin-bottom: var(--space-xs);
     font-size: var(--font-size-md);
+    margin: 2%;
 }
 
 .project-overlay p {
     color: var(--color-text-secondary);
     font-size: var(--font-size-sm);
-    margin: 0;
+    margin: 2%;
+    margin-bottom: 2%;
+    
 }
 
 /* Project info section */
 .project-info {
-    padding: var(--space-md);
+    padding: 2%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    gap : 2vh;
+    margin-top: 1vh;
 }
 
 .project-info h3 {

@@ -25,7 +25,6 @@ const App = () => {
       <About/>
       <Services navigateToProjects={navigateToProjects} /> 
       <Projects activeCategory={activeProjectCategory} />
-      <MyWork/>
       <Contact/>
       <Footer/>
     </div>

@@ -108,7 +108,7 @@ const Projects = ({ activeCategory }) => {
                                 onClick={() => openProjectDetails(project)}
                             >
                                 <div className="project-image">
-                                    {/* MODIFIÉ: Ajout du gestionnaire d'erreur */}
+                                    
                                     <img 
                                         src={project.image} 
                                         alt={project.title} 
