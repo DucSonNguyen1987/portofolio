@@ -2,7 +2,7 @@
 
 const projects_data = [
     {
-        title: "Accenty & Co - Event Planning Agency",
+        title: "Accenty & Co",
         shortDescription: "Site web professionnel pour une agence événementielle haut de gamme",
         fullDescription: "Conception et développement d'un site web complet pour Accenty & Co, une agence d'organisation d'événements premium basée en RD Congo. Le site présente leurs services, leur portfolio d'événements, leur équipe, et offre des fonctionnalités de prise de rendez-vous et de suivi de projet client. Développé avec React et des technologies web modernes, le site offre une expérience utilisateur fluide avec un design responsive et élégant.",
         image: "/images/projects/Accenty/Accenty-screenshot.png",
@@ -38,7 +38,7 @@ const projects_data = [
             "Architecture en couches avec séparation des préoccupations"
         ],
         githubLink: "https://github.com/DucSonNguyen1987/crypto-science_front",
-        liveLink: "https://crypto-science-front-bz0u0rf3b-nguyen-duc-sons-projects.vercel.app/"
+        liveLink: "https://crypto-science-front.vercel.app/"
     },
    
     {
@@ -57,7 +57,7 @@ const projects_data = [
             "Interface responsive optimisée pour mobile et desktop",
             "Déploiement continu sur Vercel"
         ],
-        githubLink: "https://github.com/DucSonNguyen1987/yayaweb-frontend", // À remplacer par le lien vers votre repo
+        githubLink: "https://github.com/DucSonNguyen1987/yayaweb-frontend", 
         liveLink: "https://yayaweb-frontend.vercel.app/"
     }
 ];
